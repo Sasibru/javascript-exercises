@@ -1,6 +1,11 @@
 const removeFromArray = function(values, remove) { 
+        let localArray
     for (let i = 0; i < values.length; i++) {
-            if()
+            if(values[i] === remove) {
+                    values.splice();
+                    localArray = values;
+            }
+            return localArray;
     }   
  return localArray
 };
