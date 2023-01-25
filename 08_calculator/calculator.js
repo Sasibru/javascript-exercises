@@ -32,14 +32,15 @@ const power = function(num, power) {
 
 
 const factorial = function(num) {
-  let answer = 1;
-  if (num == 0 || num == 1){
-    return answer;
-  }else if(num > 1){
-    for(let i = num; i >= 1; i--){
-      answer = answer * i;
+  if (num === 0) {
+    return 1;
+  }else {
+    let total = 1;
+    for (let i = 1; i <= num; i++) {
+        total *= i;
     }
-  };
+    return total;
+  }
 };
 
 // Do not edit below this line
