@@ -1,13 +1,12 @@
 const palindromes = function (string) {
-        const removeExc = string.replaceAll("!", "");
-        const removePunct = removeExc.replaceAll(".", "");
-        const removeCharacters = removePunct;
-    const charactersRemoved = removeCharacters;
-    const lowerCase = charactersRemoved.toLowerCase();
-    const arrayValues = lowerCase.split("");
-    const reverseArrayValues = arrayValues.reverse();
-    const reverseString = reverseArrayValues.join("");
-    if (lowerCase === reverseString) {
+    const removeCharactersAndToLower = string
+    .toLowerCase()
+    .replace(/[^a-z]/g, "");
+    const stringProcessing = removeCharactersAndToLower
+    .split("")
+    .reverse()
+    .join("");
+    if (removeCharactersAndToLower === stringProcessing) {
         return true;
     }else {
         return false;
